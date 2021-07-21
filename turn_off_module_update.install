@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function turn_off_module_update_install() {
+  module_set_weight('turn_off_module_update', 100);
+}

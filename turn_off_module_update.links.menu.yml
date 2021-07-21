@@ -1,0 +1,7 @@
+turn_off_module_update.link:
+  title: 'Модули без обновления'
+  description: 'Отключение обновления модулей'
+  menu_name: admin
+  parent: system.modules_list
+  route_name: turn_off_module_update.routing
+  weight: 100

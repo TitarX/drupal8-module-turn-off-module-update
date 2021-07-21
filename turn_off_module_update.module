@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Turn off module update
+ */
+
+/**
+ * Implements hook_update_projects_alter().
+ */
+function turn_off_module_update_update_projects_alter(&$projects) {
+  $modulesNames = \Drupal\turn_off_module_update\Controller\TurnOffModuleUpdateController::getModulesWithoutUpdate(
+  );
+
+  foreach ($modulesNames as $moduleName) {
+    if (isset($projects[$moduleName])) {
+      unset($projects[$moduleName]);
+    }
+  }
+}

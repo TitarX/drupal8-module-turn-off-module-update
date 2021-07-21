@@ -1,0 +1,9 @@
+turn_off_module_update.routing:
+  path: '/admin/modules/turn-off-module-update'
+  defaults:
+    _controller: '\Drupal\turn_off_module_update\Controller\TurnOffModuleUpdateController::getContent'
+    _title: 'Модули без обновления'
+  requirements:
+    # _permission: 'access administration pages'
+    # _permission: 'access content'
+    _custom_access: '\Drupal\turn_off_module_update\Controller\TurnOffModuleUpdateController::access'
